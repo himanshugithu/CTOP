@@ -24,9 +24,10 @@ void postData() {
         http.addHeader("Authorization", "Bearer 2dcd1f53e30be7479b1eaa1e15b1c292");
         
         DynamicJsonDocument jsonDoc(1024);// Create a JSON document
-        jsonDoc["param1"] = "temp";
-        // jsonDoc["LCT"] = "humi";
-        // jsonDoc["Vehicle Number"] = "v";
+        jsonDoc["temp"] = 100.0;
+        jsonDoc["humi"] = 20.0;
+        jsonDoc["co2"] = "v";
+        
         String requestBody;  // Serialize JSON to a string
         serializeJson(jsonDoc, requestBody);
 
